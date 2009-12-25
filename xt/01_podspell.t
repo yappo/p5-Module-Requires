@@ -5,6 +5,10 @@ add_stopwords(map { split /[\s\:\-]/ } <DATA>);
 $ENV{LANG} = 'C';
 all_pod_files_spelling_ok('lib');
 __DATA__
-Default Name
-default {at} example.com
 Module::Requires
+     Kazuhiro
+     Osawa
+     plan
+     params
+     shibuya
+     PL

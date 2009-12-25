@@ -1,4 +1,4 @@
-package Classc;
+package ClassC;
 use strict;
 use warnings;
 our $VERSION = '0.12';

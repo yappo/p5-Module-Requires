@@ -2,9 +2,9 @@ use strict;
 use warnings;
 use lib 't/lib';
 use Test::More;
+require Module::Requires;
 
 eval {
-    require Module::Requires;
     Module::Requires->import(
         'ClassA' => {
             import  => [qw/ foo bar baz /],
@@ -13,13 +13,10 @@ eval {
     );
 };
 like($@, qr/ClassA is unloaded because -autoload an option is lacking./);
-unlike($@, qr/version/);
 
-ok(ClassA->can('package'));
-is(ClassA->params, '');
+ok(!ClassA->can('package'));
 
 eval {
-    require Module::Requires;
     Module::Requires->import(
         '-autoload',
         'ClassA' => {
@@ -33,14 +30,13 @@ eval {
     );
 };
 like($@, qr/ClassA version 0.03 required--this is only version 0.02\nClassB version 0.10 required--this is only version 0.08/);
-unlike($@, qr/ClassC/);
+unlike($@, qr/ClassC.+Module::Requires::import/);
 
 ok(ClassB->can('package'));
 ok(ClassC->can('package'));
-is(ClassA->params, '');
+is(ClassA->params, 'ClassA');
 
 eval {
-    require Module::Requires;
     Module::Requires->import(
         '-autoload',
         'ClassA' => {
@@ -51,3 +47,5 @@ eval {
 };
 is($@, '');
 is(ClassA->params, 'ClassA, foo, bar, baz');
+
+done_testing;
