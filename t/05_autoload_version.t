@@ -34,7 +34,7 @@ unlike($@, qr/ClassC.+Module::Requires::import/);
 
 ok(ClassB->can('package'));
 ok(ClassC->can('package'));
-is(ClassA->params, 'ClassA');
+is(ClassA->params, '');
 
 eval {
     Module::Requires->import(

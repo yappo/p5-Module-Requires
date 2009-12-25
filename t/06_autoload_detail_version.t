@@ -25,7 +25,7 @@ eval {
     );
 };
 like($@, qr/ClassA version > 0.01 AND != 0.02 required--this is only version 0.02/);
-is(ClassA->params, 'ClassA');
+is(ClassA->params, '');
 
 eval {
     Module::Requires->import(
@@ -41,7 +41,7 @@ eval {
     );
 };
 like($@, qr/ClassA version > 0.01 AND != 0.02 required--this is only version 0.02\nClassB version 0.10 required--this is only version 0.08\nClassC version > 5.8 required--this is only version 0.12/);
-is(ClassA->params, 'ClassA');
+is(ClassA->params, '');
 
 eval {
     Module::Requires->import(
@@ -58,7 +58,7 @@ eval {
 };
 like($@, qr/ClassA version > 0.01 AND != 0.02 required--this is only version 0.02\nClassC version > 5.8 required--this is only version 0.12/);
 unlike($@, qr/ClassB.+Module::Requires::import/);
-is(ClassA->params, 'ClassA');
+is(ClassA->params, '');
 
 
 eval {
