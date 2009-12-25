@@ -10,7 +10,7 @@ sub import {
     my $is_autoload = (@args && $args[0] eq '-autoload') ? shift @args : undef;
 
     my $caller = caller(0);
-    my $target = $is_autoload ? $caller : join '::', __PACKAGE__, $caller;
+    my $target = $is_autoload ? $caller : join '::', __PACKAGE__, '_load_tmp_', $caller;
 
     my @errors;
     my $i = 0;
