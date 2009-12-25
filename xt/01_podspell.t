@@ -12,3 +12,6 @@ Module::Requires
      params
      shibuya
      PL
+     lestrrat
+     nekokak
+
