@@ -108,7 +108,15 @@ sub import {
 
     # run import method
     for my $obj (@imports) {
-        eval qq{package $target;\$obj->[0]->import(\@{ \$obj->[1] || [] })}; ## no critic.
+        if (defined $obj->[1]) {
+            if (@{ $obj->[1] }) {
+                eval qq{package $target;\$obj->[0]->import(\@{ \$obj->[1] })}; ## no critic.
+            } else {
+                # same the "use Module ();", it case is do not call import method
+            }
+        } else {
+            eval qq{package $target;\$obj->[0]->import}; ## no critic.
+        }
     }
 }
 

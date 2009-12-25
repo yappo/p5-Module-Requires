@@ -42,6 +42,15 @@ is(ClassA->params, 'ClassA, foo, bar, baz');
 
 Module::Requires->import(
     '-autoload',
+    'ClassI' => { import => [] },
+);
+eval {
+    export();
+};
+like($@, qr/Undefined subroutine &main::export called/);
+
+Module::Requires->import(
+    '-autoload',
     'ClassI' => { import => [qw/ testa testb /] },
 );
 is(testa(), 'OK');
