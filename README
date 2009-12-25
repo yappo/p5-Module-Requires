@@ -52,6 +52,9 @@ DESCRIPTION
 AUTHOR
     Kazuhiro Osawa <yappo <at> shibuya <döt> pl>
 
+THANKS TO
+    nekokak, lestrrat
+
 SEE ALSO
     Test::Requires, idea by DBIx::Class::Storage::DBI::Replicated
 

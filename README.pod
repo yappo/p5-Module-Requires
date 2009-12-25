@@ -58,6 +58,10 @@ When writing modules, such as plugin, required modules which runs short is displ
 
 Kazuhiro Osawa E<lt>yappo <at> shibuya <döt> plE<gt>
 
+=head1 THANKS TO
+
+nekokak, lestrrat
+
 =head1 SEE ALSO
 
 L<Test::Requires>, idea by L<DBIx::Class::Storage::DBI::Replicated>
