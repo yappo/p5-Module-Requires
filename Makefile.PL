@@ -5,7 +5,7 @@ readme_from 'lib/Module/Requires.pm';
 readme_pod_from 'lib/Module/Requires.pm';
 githubmeta;
 
-# requires '';
+requires 'Carp';
 
 tests 't/*.t';
 author_tests 'xt';
