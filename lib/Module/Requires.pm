@@ -170,7 +170,12 @@ with autoloader and import params and version check
 
 =head1 DESCRIPTION
 
-Module::Requires is Checks to see if the module can be loaded.
+This module lets you specify complex constraints on the version
+of modules that you're using.
+With the C<use> built-in, you can just specify a minimum version,
+but with C<Module::Requires> you can specify a range, and also
+exclude specific versions.
+You can optionally load the modules at the same time.
 
 required modules warns of not installed if Inside of Makefile.PL With feature When specifying require module.
 

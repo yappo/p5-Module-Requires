@@ -7,6 +7,7 @@ Revision history for Perl module Module::Requires
     - Improved abstract
     - Fixed pod spacing error, which meant part of SYNOPSIS wasn't
       displaying right
+    - Improved description of module in first paragraph of DESCRIPTION.
 
 0.03 2009-12-25 YAPPO
     - Remake README
