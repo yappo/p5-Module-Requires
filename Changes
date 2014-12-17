@@ -5,6 +5,8 @@ Revision history for Perl module Module::Requires
     - Specified min perl version as 5.006, in code and metadata
     - Reformatted this file as per CPAN::Changes::Spec
     - Improved abstract
+    - Fixed pod spacing error, which meant part of SYNOPSIS wasn't
+      displaying right
 
 0.03 2009-12-25 YAPPO
     - Remake README

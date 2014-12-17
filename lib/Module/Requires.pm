@@ -140,6 +140,7 @@ with version Checks
   use Class::Accessor;
 
 detailed check of version
+
   # It is more than 0.10 and is except 0.12.
   use Module::Requires
     'Class::Trigger' => [ '>' => 0.10, '!=', 0.12 ],
