@@ -1,7 +1,9 @@
 package Module::Requires;
+
+use 5.006;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.04';
 
 use Carp;
 
@@ -115,9 +117,11 @@ sub import {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
-Module::Requires - Checks to see if the module can be loaded
+Module::Requires - require minimum version, or version within a range, for one or more modules
 
 =head1 SYNOPSIS
 
@@ -136,6 +140,7 @@ with version Checks
   use Class::Accessor;
 
 detailed check of version
+
   # It is more than 0.10 and is except 0.12.
   use Module::Requires
     'Class::Trigger' => [ '>' => 0.10, '!=', 0.12 ],
@@ -165,7 +170,12 @@ with autoloader and import params and version check
 
 =head1 DESCRIPTION
 
-Module::Requires is Checks to see if the module can be loaded.
+This module lets you specify complex constraints on the version
+of modules that you're using.
+With the C<use> built-in, you can just specify a minimum version,
+but with C<Module::Requires> you can specify a range, and also
+exclude specific versions.
+You can optionally load the modules at the same time.
 
 required modules warns of not installed if Inside of Makefile.PL With feature When specifying require module.
 
