@@ -6,6 +6,7 @@ readme_pod_from 'lib/Module/Requires.pm';
 githubmeta;
 
 requires 'Carp';
+requires 'perl' => '5.006';
 
 tests 't/*.t';
 author_tests 'xt';

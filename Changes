@@ -2,6 +2,7 @@ Revision history for Perl module Module::Requires
 
 0.04 2012-12-?? YAPPO
     - Added =encoding utf8 to the pod, fixing the pod warning
+    - Specified min perl version as 5.006, in code and metadata
     - Reformatted this file as per CPAN::Changes::Spec
 
 0.03 2009-12-25 YAPPO

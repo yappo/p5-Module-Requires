@@ -1,7 +1,9 @@
 package Module::Requires;
+
+use 5.006;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.04';
 
 use Carp;
 
