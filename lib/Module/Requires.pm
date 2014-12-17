@@ -121,7 +121,7 @@ __END__
 
 =head1 NAME
 
-Module::Requires - Checks to see if the module can be loaded
+Module::Requires - require minimum version, or version within a range, for one or more modules
 
 =head1 SYNOPSIS
 
