@@ -115,6 +115,8 @@ sub import {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Module::Requires - Checks to see if the module can be loaded
