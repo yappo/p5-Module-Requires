@@ -1,4 +1,14 @@
-Revision history for Perl extension Module::Requires
+Revision history for Perl module Module::Requires
 
-0.01    Fri Dec 25 10:43:07 2009
-        - original version
+0.04 2012-12-?? YAPPO
+    - Reformatted this file as per CPAN::Changes::Spec
+
+0.03 2009-12-25 YAPPO
+    - Remake README
+
+0.02 2009-12-25 YAPPO
+    - Add dependencies
+
+0.01 2009-12-25 YAPPO
+    - First release to CPAN
+
